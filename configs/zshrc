@@ -13,11 +13,15 @@ eval "$(zoxide init zsh)"
 # fzf (fuzzy finder)
 source <(fzf --zsh)
 
+# Default editor
+export EDITOR="code --wait"
+export VISUAL="code --wait"
+
 # Aliases
 alias cat="bat"
-alias ls="eza --icons --group-directories-first"
-alias ll="eza --icons --group-directories-first -la"
-alias lt="eza --icons --tree --level=2"
+alias ls="eza --icons --group-directories-first --hyperlink"
+alias ll="eza --icons --group-directories-first --hyperlink -la"
+alias lt="eza --icons --tree --level=2 --hyperlink"
 alias lg="lazygit"
 alias cc="claude --dangerously-skip-permissions"
 
