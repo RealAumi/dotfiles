@@ -1,32 +1,54 @@
-# Theme
-theme = catppuccin-mocha
+# === Theme ===
+theme = Catppuccin Mocha
 
-# Font
+# === Font ===
 font-family = "Maple Mono NF CN"
-font-size = 12
+font-size = 13
 font-thicken = false
 
-# Background blur + transparency
+# === Background ===
 background-opacity = 0.92
 background-blur-radius = 20
 
-# Window
+# === Window ===
 window-padding-x = 8
 window-padding-y = 4
-unfocused-split-opacity = 0.85
+window-padding-balance = true
+window-save-state = always
+resize-overlay = after-first
 
-# Cursor
+# === Cursor ===
 cursor-style = bar
 cursor-style-blink = false
 
-# macOS specific
+# === Clipboard ===
+clipboard-read = allow
+clipboard-write = allow
+
+# === Shell Integration ===
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+
+# === Quick Terminal (global hotkey) ===
+keybind = global:ctrl+backquote=toggle_quick_terminal
+quick-terminal-position = top
+quick-terminal-animation-duration = 0.15
+quick-terminal-screen = mouse
+
+# === Split Panes ===
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+alt+left=goto_split:left
+keybind = cmd+alt+right=goto_split:right
+keybind = cmd+alt+up=goto_split:top
+keybind = cmd+alt+down=goto_split:bottom
+keybind = cmd+shift+equal=equalize_splits
+keybind = cmd+shift+z=toggle_split_zoom
+
+# === macOS ===
 macos-titlebar-style = tabs
 macos-option-as-alt = true
 
-# Cmd → Ctrl forwarding (makes terminal apps feel native)
+# === Cmd → Ctrl forwarding (for micro etc.) ===
 keybind = cmd+s=text:\x13
-keybind = cmd+z=text:\x1a
-keybind = cmd+shift+z=text:\x19
-keybind = cmd+a=text:\x01
-keybind = cmd+e=text:\x05
 keybind = cmd+backspace=text:\x15
