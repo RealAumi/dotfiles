@@ -22,3 +22,11 @@ cursor-style-blink = false
 # macOS specific
 macos-titlebar-style = tabs
 macos-option-as-alt = true
+
+# Cmd → Ctrl forwarding (makes terminal apps feel native)
+keybind = cmd+s=text:\x13
+keybind = cmd+z=text:\x1a
+keybind = cmd+shift+z=text:\x19
+keybind = cmd+a=text:\x01
+keybind = cmd+e=text:\x05
+keybind = cmd+backspace=text:\x15
