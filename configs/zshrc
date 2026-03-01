@@ -7,6 +7,19 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Prompt
 eval "$(starship init zsh)"
 
+# Transient prompt: collapse previous prompts to ♡ after Enter
+_transient_prompt_precmd() {
+  PROMPT="$(starship prompt)"
+}
+_transient_prompt_accept() {
+  PROMPT=$'\e[1;38;2;245;169;184m♡\e[0m '
+  zle .reset-prompt
+  echo
+  zle .accept-line
+}
+precmd_functions+=(_transient_prompt_precmd)
+zle -N accept-line _transient_prompt_accept
+
 # zoxide (smart cd)
 eval "$(zoxide init zsh)"
 

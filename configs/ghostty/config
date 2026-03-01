@@ -49,6 +49,11 @@ keybind = cmd+shift+z=toggle_split_zoom
 macos-titlebar-style = tabs
 macos-option-as-alt = true
 
+# === Cursor Shaders ===
+custom-shader = ~/.config/ghostty/cursor-shaders/cursor_warp.glsl
+custom-shader = ~/.config/ghostty/cursor-shaders/ripple_cursor.glsl
+custom-shader-animation = always
+
 # === Cmd → Ctrl forwarding (for micro etc.) ===
 keybind = cmd+s=text:\x13
 keybind = cmd+backspace=text:\x15
