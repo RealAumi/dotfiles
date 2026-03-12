@@ -45,6 +45,14 @@ ln -sf "$DOTFILES_DIR/configs/starship/starship.toml" ~/.config/starship.toml
 echo "  Linked ghostty config"
 echo "  Linked starship config"
 
+# ---- Ghostty Cursor Shaders ----
+if [ ! -d ~/.config/ghostty/cursor-shaders ]; then
+  echo "  Installing cursor shaders..."
+  git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/cursor-shaders
+else
+  echo "  Cursor shaders already installed, skipping."
+fi
+
 # ---- .zshrc ----
 echo "[5/6] Setting up .zshrc..."
 if [ -f ~/.zshrc ]; then
