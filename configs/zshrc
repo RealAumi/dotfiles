@@ -37,6 +37,8 @@ alias ll="eza --icons --group-directories-first --hyperlink -la"
 alias lt="eza --icons --tree --level=2 --hyperlink"
 alias lg="lazygit"
 alias cc="claude --dangerously-skip-permissions"
+alias bs="brew search"
+alias bi="brew install"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
